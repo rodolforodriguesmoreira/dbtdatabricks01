@@ -1,9 +1,9 @@
 {% macro cast_int(col) -%}
-    CAST({{ col }} AS BIGINT)
+    CAST(SPLIT({{ col }}, '\\.')[0] AS BIGINT)
 {%- endmacro %}
 
 {% macro cast_decimal(col) -%}
-    CAST({{ col }} AS DOUBLE)
+    CAST(REPLACE({{ col }}, ',', '.') AS DOUBLE)
 {%- endmacro %}
 
 {% macro cast_timestamp(col, fmt) -%}

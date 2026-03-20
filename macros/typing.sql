@@ -1,9 +1,9 @@
 {% macro cast_int(col) -%}
-    TRY_CAST({{ col }} AS BIGINT)
+    CAST({{ col }} AS BIGINT)
 {%- endmacro %}
 
 {% macro cast_decimal(col) -%}
-    TRY_CAST({{ col }} AS DOUBLE)
+    CAST({{ col }} AS DOUBLE)
 {%- endmacro %}
 
 {% macro cast_timestamp(col, fmt) -%}

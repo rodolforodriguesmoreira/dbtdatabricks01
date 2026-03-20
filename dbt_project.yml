@@ -36,7 +36,7 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 
 models:
-  dbtdatabricks01:
+  my_new_project:
     bronze:
       +schema: bronze
     silver:
